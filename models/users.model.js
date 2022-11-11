@@ -10,10 +10,10 @@ const userSchema = new Schema({
         minlength: 3
     },
     id: {
-        type: String,
-        unique: true
+        type: String
     }
 },{
+
     timestamps: true,
 })
 

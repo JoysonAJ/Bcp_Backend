@@ -37,8 +37,10 @@ app.get('/add',(req,res)=>{
 })
 
 app.get('/get',(req,res)=>{
-    const data=User.findOne({'username':'user'})
-    console.log(data)
+    User.findOne({'username':'user'})
+    .then(data=>{
+        console.log(data.username)
+        console.log(data.id)})
 })
 app.listen(port,()=>{
     console.log(`port is active ${port}`);
