@@ -42,6 +42,10 @@ app.get('/get',(req,res)=>{
         console.log(data.username)
         console.log(data.id)})
 })
+
+app.get('/a',(req,res)=>{
+    res.status(200).json(req.body);
+})
 app.listen(port,()=>{
     console.log(`port is active ${port}`);
 });
